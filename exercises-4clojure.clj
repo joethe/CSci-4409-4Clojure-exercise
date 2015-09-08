@@ -124,8 +124,29 @@ filter #(> (mod % 2) 0 )
 
 ; What I pasted in the box:
 
+#(for [i (range %2)] (take-nth %2 (drop i %1)))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;; Problem #44: Rotate Sequence
 
+; What I pasted in the box:
 
+#(take (count %2) (drop (mod %1 (count %2)) (cycle %2)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #46: Flipping out
+
+; What I pasted in the box:
+
+#(fn [a b] (% b a))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #47: Contain yourself
+
+; What I pasted in the box:
+
+4
 
