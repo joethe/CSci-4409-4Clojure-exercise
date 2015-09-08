@@ -9,6 +9,10 @@
 ;;; I've included a few examples below just to give you a sense of what I'm looking
 ;;; for.
 
+;;; CSCI 4409 - Fall 2015
+;;; Sep. 2015
+;;; Joseph Thelen
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; Problem #162: Logical falsity and true
@@ -32,4 +36,96 @@
 ; which is an anonymous function that doubles its argument, for example:
 
 (= (#(* 2 %) 11) 22)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #10: Intro to maps
+
+; What I pasted into the box:
+
+20
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #16: Hello World
+
+; What I pasted in the box:
+
+#(str "Hello, " % "!")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #17: Sequences: map
+
+; What I pasted in the box:
+
+'(6 7 8)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #18: Sequences: filter
+
+; What I pasted in the box:
+
+'(6 7)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #20: Penultimate Element
+
+; What I pasted in the box:
+
+#(nth (reverse %) 1)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #21: Nth Element
+
+; What I pasted in the box:
+
+(fn thing [a b] (if (= b 0) (first a) (thing (rest a) (- b 1))))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #23: Recurse a Sequence
+
+; What I pasted in the box:
+
+#((fn kittens [a b] (if (= '() (rest a)) (cons (first a) b) (kittens (rest a) (cons (first a) b)))) % '())
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #25: Find the odd numbers
+
+; What I pasted in the box:
+
+filter #(> (mod % 2) 0 )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #37: Regular Expressions
+
+; What I pasted in the box:
+
+"ABC"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #40: Interpose a Seq
+
+; What I pasted in the box:
+
+#((fn thingy [a b c] (if (= '() (rest b)) (reverse (cons (first b) c)) (thingy a (rest b) (cons a (cons (first b) c))))) %1 %2 '())
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Problem #43: Reverse interleave
+
+; What I pasted in the box:
+
+
+
+
+
 
